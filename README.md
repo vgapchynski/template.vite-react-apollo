@@ -1,0 +1,1 @@
+# template.vite-react-apollo
