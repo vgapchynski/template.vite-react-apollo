@@ -1,0 +1,48 @@
+{
+  "name": "template",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently \"yarn gql:codegen\" \"vite\"",
+    "build": "tsc && vite build",
+    "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview",
+    "gql:getSchema": "get-graphql-schema https://rickandmortyapi.com/graphql > src/api/schema.gql",
+    "gql:codegen": "graphql-code-generator --config src/api/codegen.yml"
+  },
+  "dependencies": {
+    "@apollo/client": "^3.7.12",
+    "@chakra-ui/react": "^2.5.5",
+    "@emotion/react": "^11.10.6",
+    "@emotion/styled": "^11.10.6",
+    "framer-motion": "^10.12.4",
+    "graphql": "^16.6.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.10.0"
+  },
+  "devDependencies": {
+    "@graphql-codegen/cli": "3.3.0",
+    "@graphql-codegen/client-preset": "3.0.0",
+    "@graphql-codegen/introspection": "3.0.1",
+    "@graphql-codegen/typescript-react-apollo": "^3.3.7",
+    "@trivago/prettier-plugin-sort-imports": "^4.1.1",
+    "@types/react": "^18.0.28",
+    "@types/react-dom": "^18.0.11",
+    "@typescript-eslint/eslint-plugin": "^5.57.1",
+    "@typescript-eslint/parser": "^5.57.1",
+    "@vitejs/plugin-react": "^4.0.0-beta.0",
+    "concurrently": "^8.0.1",
+    "eslint": "^8.38.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.3.4",
+    "get-graphql-schema": "^2.1.2",
+    "graphql-codegen": "^0.4.0",
+    "nodemon": "^2.0.22",
+    "prettier": "^2.8.7",
+    "typescript": "^5.0.2",
+    "vite": "^4.3.0",
+    "vite-tsconfig-paths": "^4.2.0"
+  }
+}
