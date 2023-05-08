@@ -2,10 +2,6 @@ query getCharacters {
   characters {
     results {
       id
-      name
-      location {
-        id
-      }
     }
   }
 }

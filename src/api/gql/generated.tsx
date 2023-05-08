@@ -210,12 +210,6 @@ export type GetCharactersQuery = {
     results?: Array<{
       __typename?: "Character";
       id?: string | null;
-      name?: string | null;
-      location?: {
-        __typename?: "Location";
-        id?: string | null;
-        name?: string | null;
-      } | null;
     } | null> | null;
   } | null;
 };
@@ -225,11 +219,6 @@ export const GetCharactersDocument = gql`
     characters {
       results {
         id
-        name
-        location {
-          id
-          name
-        }
       }
     }
   }
